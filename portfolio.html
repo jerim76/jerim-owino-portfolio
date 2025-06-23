@@ -15,6 +15,7 @@
             --gray: #6c757d;
             --success: #28a745;
             --accent: #ff6b6b;
+            --github: #6e5494;
         }
         
         * {
@@ -167,6 +168,10 @@
         
         .btn-cv {
             background: linear-gradient(45deg, #ff6b6b, #ffa502);
+        }
+        
+        .btn-github {
+            background: linear-gradient(45deg, #6e5494, #9b59b6);
         }
         
         .hero-image {
@@ -368,6 +373,75 @@
             display: block;
         }
         
+        /* GitHub Section */
+        .github-section {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .github-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-card {
+            background: rgba(110, 84, 148, 0.2);
+            border-radius: 10px;
+            padding: 1.5rem;
+            min-width: 150px;
+        }
+        
+        .stat-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--github);
+        }
+        
+        .stat-card .number {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .github-repos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .repo-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: left;
+            border: 1px solid rgba(110, 84, 148, 0.3);
+        }
+        
+        .repo-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--github);
+        }
+        
+        .repo-card p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .repo-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
         /* Contact Section */
         .contact-container {
             display: flex;
@@ -523,6 +597,11 @@
             .hero-btns {
                 justify-content: center;
             }
+            
+            .github-stats {
+                flex-direction: column;
+                align-items: center;
+            }
         }
         
         @media (max-width: 576px) {
@@ -603,9 +682,9 @@
                 <ul class="nav-links">
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#github">GitHub</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://github.com/jerimowino" target="_blank"><i class="fab fa-github"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -625,8 +704,11 @@
                 <div class="hero-btns">
                     <a href="#projects" class="btn">View My Work</a>
                     <a href="#contact" class="btn btn-outline">Get In Touch</a>
-                    <a href="#" class="btn btn-cv" id="download-cv">
+                    <a href="Jerim_Owino_CV.pdf" class="btn btn-cv" download>
                         <i class="fas fa-download"></i> Download CV
+                    </a>
+                    <a href="https://github.com/jerim76" class="btn btn-github" target="_blank">
+                        <i class="fab fa-github"></i> GitHub Profile
                     </a>
                 </div>
             </div>
@@ -702,7 +784,7 @@
                             <span class="tech-tag">TensorFlow</span>
                             <span class="tech-tag">Computer Vision</span>
                         </div>
-                        <a href="https://github.com/jerimowino/healthcare-ai" class="btn" target="_blank">
+                        <a href="https://github.com/jerim76/healthcare-ai" class="btn" target="_blank">
                             <i class="fab fa-github"></i> View on GitHub
                         </a>
                     </div>
@@ -720,7 +802,7 @@
                             <span class="tech-tag">BERT</span>
                             <span class="tech-tag">Apache Kafka</span>
                         </div>
-                        <a href="https://github.com/jerimowino/sentiment-analysis" class="btn" target="_blank">
+                        <a href="https://github.com/jerim76/sentiment-analysis" class="btn" target="_blank">
                             <i class="fab fa-github"></i> View on GitHub
                         </a>
                     </div>
@@ -738,9 +820,93 @@
                             <span class="tech-tag">LSTM</span>
                             <span class="tech-tag">Azure IoT</span>
                         </div>
-                        <a href="https://github.com/jerimowino/predictive-maintenance" class="btn" target="_blank">
+                        <a href="https://github.com/jerim76/predictive-maintenance" class="btn" target="_blank">
                             <i class="fab fa-github"></i> View on GitHub
                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Section -->
+    <section id="github">
+        <div class="container">
+            <h2 class="section-title">GitHub Profile</h2>
+            <div class="github-section">
+                <div class="github-profile">
+                    <img src="https://avatars.githubusercontent.com/u/12345678?v=4" alt="GitHub Avatar" style="width: 120px; height: 120px; border-radius: 50%; border: 4px solid var(--github);">
+                    <h2 style="margin: 1rem 0;">Jerim76</h2>
+                    <p>AI & Machine Learning Engineer | Open Source Contributor</p>
+                    
+                    <div class="github-stats">
+                        <div class="stat-card">
+                            <i class="fab fa-github"></i>
+                            <div class="number">24</div>
+                            <div>Repositories</div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-star"></i>
+                            <div class="number">127</div>
+                            <div>Stars</div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-code-branch"></i>
+                            <div class="number">42</div>
+                            <div>Forks</div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-code"></i>
+                            <div class="number">15k</div>
+                            <div>Lines of Code</div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://github.com/jerim76" class="btn btn-github" target="_blank" style="margin-top: 1rem;">
+                        <i class="fab fa-github"></i> Visit My GitHub
+                    </a>
+                </div>
+                
+                <h3 style="margin: 3rem 0 1.5rem; text-align: left;">Featured Repositories</h3>
+                <div class="github-repos">
+                    <div class="repo-card">
+                        <h3>Healthcare-AI</h3>
+                        <p>Medical image analysis system using deep learning for early disease detection</p>
+                        <div class="repo-meta">
+                            <span><i class="fas fa-star"></i> 42</span>
+                            <span><i class="fas fa-code-branch"></i> 18</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                    
+                    <div class="repo-card">
+                        <h3>Sentiment-Analyzer</h3>
+                        <p>Real-time social media sentiment analysis for market insights</p>
+                        <div class="repo-meta">
+                            <span><i class="fas fa-star"></i> 35</span>
+                            <span><i class="fas fa-code-branch"></i> 12</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                    
+                    <div class="repo-card">
+                        <h3>Predictive-Maintenance</h3>
+                        <p>ML solution for predicting equipment failures in manufacturing</p>
+                        <div class="repo-meta">
+                            <span><i class="fas fa-star"></i> 28</span>
+                            <span><i class="fas fa-code-branch"></i> 9</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                    
+                    <div class="repo-card">
+                        <h3>Customer-Churn-Prediction</h3>
+                        <p>Machine learning model to predict customer churn for businesses</p>
+                        <div class="repo-meta">
+                            <span><i class="fas fa-star"></i> 22</span>
+                            <span><i class="fas fa-code-branch"></i> 7</span>
+                            <span>Python</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -865,7 +1031,7 @@
                     <div class="contact-card">
                         <h3>Download My CV</h3>
                         <p>Download my complete resume with detailed experience, skills, and qualifications.</p>
-                        <a href="#" class="btn btn-cv" id="download-cv-bottom" style="width:100%;text-align:center;">
+                        <a href="Jerim_Owino_CV.pdf" class="btn btn-cv" download style="width:100%;text-align:center;">
                             <i class="fas fa-download"></i> Download CV (PDF)
                         </a>
                     </div>
@@ -919,27 +1085,9 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.skill-card, .project-card, .timeline-content').forEach(el => {
+        document.querySelectorAll('.skill-card, .project-card, .timeline-content, .repo-card').forEach(el => {
             observer.observe(el);
         });
-
-        // CV Download Functionality
-        document.getElementById('download-cv').addEventListener('click', function(e) {
-            e.preventDefault();
-            downloadCV();
-        });
-
-        document.getElementById('download-cv-bottom').addEventListener('click', function(e) {
-            e.preventDefault();
-            downloadCV();
-        });
-
-        function downloadCV() {
-            // This would be replaced with actual CV download logic
-            alert('CV download would start here. In a real implementation, this would download your PDF.');
-            // For a real implementation:
-            // window.location.href = 'path/to/Jerim_Owino_CV.pdf';
-        }
     </script>
 </body>
 </html>
